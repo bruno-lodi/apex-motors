@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- Apex Motors - simulacao de financiamento - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simule o financiamento do seu veículo na Apex Motors: escolha o carro, a entrada e o prazo, e veja a parcela calculada na hora.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Financiamento | Apex Motors</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top apx-barra" id="apx-barra" aria-label="Navegação principal">
+        <div class="container">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <button class="navbar-toggler apx-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#apx-menu-conteudo" aria-controls="apx-menu-conteudo"
+                    aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse apx-menu" id="apx-menu-conteudo">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estoque.html">Estoque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="financiamento.html">Financiamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">A loja</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuMais" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                        <ul class="dropdown-menu" aria-labelledby="menuMais">
+                            <li><a class="dropdown-item" href="equipe.html">Equipe</a></li>
+                            <li><a class="dropdown-item" href="comparativo.html">Comparativo</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog e dicas</a></li>
+                            <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria-grid.html">Galeria (sem Bootstrap)</a></li>
+                            <li><a class="dropdown-item" href="galeria-flex.html">Flexbox (sem Bootstrap)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://www.fiat.com.br" target="_blank" rel="noopener">Fiat Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.jeep.com.br" target="_blank" rel="noopener">Jeep Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.toyota.com.br" target="_blank" rel="noopener">Toyota Brasil</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2"><span id="apx-saudacao" role="status"></span></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn-apex btn-apex--peq" href="contato.html">Falar com consultor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+    <header class="apx-banner apx-banner--financiamento">
+        <div class="apx-banner__fundo">
+            <img src="img/apx-hero-premium.webp" alt="" width="2560" height="1440">
+        </div>
+        <div class="apx-wrap">
+            <ol class="apx-trilha">
+                <li><a href="index.html">Home</a></li>
+                <li>Financiamento</li>
+            </ol>
+            <h1>Simule antes de negociar</h1>
+            <p>
+                Escolha o veículo, ajuste a entrada e o prazo, e veja a parcela calculada
+                na hora. A tabela usa juros de 1,29% ao mês na modalidade de crédito tradicional.
+            </p>
+        </div>
+    </header>
+
+    <section class="apx-secao" aria-labelledby="titulo-simulador">
+        <div class="apx-wrap">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <p class="apx-rotulo">01 — Simulador</p>
+                    <h2 class="apx-titulo" id="titulo-simulador">Monte a sua parcela</h2>
+                    <p class="apx-texto mb-4">
+                        O cálculo usa amortização: todo mês o juro incide sobre o saldo devedor, que
+                        diminui a cada parcela. O resultado se atualiza a cada alteração, sem
+                        recarregar a página.
+                    </p>
+
+                    <form class="apx-form" id="apx-form-financiamento" novalidate>
+                        <div class="apx-campo">
+                            <label for="fin-veiculo">Veículo</label>
+                            <select id="fin-veiculo" class="form-select" required></select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="apx-campo">
+                                    <label for="fin-entrada">Entrada (R$)</label>
+                                    <input type="number" id="fin-entrada" class="form-control"
+                                           min="0" step="1" value="30000" required>
+                                    <span class="apx-campo__erro" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="apx-campo">
+                                    <label for="fin-prazo">Prazo</label>
+                                    <select id="fin-prazo" class="form-select">
+                                        <option value="12">12 meses</option>
+                                        <option value="24">24 meses</option>
+                                        <option value="36">36 meses</option>
+                                        <option value="48" selected>48 meses</option>
+                                        <option value="60">60 meses</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apx-painel apx-painel--destaque mt-2">
+                            <p class="apx-rotulo mb-1">Parcela estimada</p>
+                            <p class="apx-card__preco mb-1" id="fin-resultado">R$ 0</p>
+                            <p class="mb-0" style="font-size:0.84rem;color:var(--apx-cinza-3);" id="fin-detalhe">
+                                Selecione um veículo para começar.
+                            </p>
+                        </div>
+
+                        <a href="contato.html" class="btn-apex btn-apex--bloco mt-3">Enviar simulação ao consultor</a>
+                    </form>
+                </div>
+
+                <div class="col-lg-6">
+                    <p class="apx-rotulo">02 — Como o cálculo funciona</p>
+                    <h2 class="apx-titulo">A conta explicada</h2>
+
+                    <div class="apx-painel mb-4">
+                        <p style="font-size:0.94rem;">
+                            A cada mês o juro é calculado sobre o saldo que ainda falta pagar e somado
+                            ao total. No fim, esse total é dividido pelo número de meses:
+                        </p>
+                        <p class="apx-codigo mb-0">
+                            saldo = valorFinanciado<br>
+                            repita para cada mês:<br>
+                            &nbsp;&nbsp;juros = saldo × 1,29%<br>
+                            &nbsp;&nbsp;total = total + juros<br>
+                            &nbsp;&nbsp;saldo = saldo − (valorFinanciado ÷ meses)<br>
+                            parcela = (valorFinanciado + total) ÷ meses
+                        </p>
+                    </div>
+
+                    <div class="table-responsive apx-tabela-wrap">
+                        <table class="table apx-tabela mb-0">
+                            <caption>Tabela 1 — Exemplo de parcela para um veículo de R$ 150.000</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Entrada</th>
+                                    <th scope="col">Prazo</th>
+                                    <th scope="col">Financiado</th>
+                                    <th scope="col">Parcela</th>
+                                    <th scope="col">Total pago</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>R$ 30.000</td>
+                                    <td>24 meses</td>
+                                    <td>R$ 120.000</td>
+                                    <td class="apx-celula-destaque">R$ 5.806</td>
+                                    <td>R$ 169.350</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 30.000</td>
+                                    <td>36 meses</td>
+                                    <td>R$ 120.000</td>
+                                    <td class="apx-celula-destaque">R$ 4.129</td>
+                                    <td>R$ 178.638</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 30.000</td>
+                                    <td>48 meses</td>
+                                    <td>R$ 120.000</td>
+                                    <td class="apx-celula-destaque">R$ 3.290</td>
+                                    <td>R$ 187.926</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 45.000</td>
+                                    <td>48 meses</td>
+                                    <td>R$ 105.000</td>
+                                    <td class="apx-celula-destaque">R$ 2.879</td>
+                                    <td>R$ 183.185</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 60.000</td>
+                                    <td>60 meses</td>
+                                    <td>R$ 90.000</td>
+                                    <td class="apx-celula-destaque">R$ 2.090</td>
+                                    <td>R$ 185.410</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="apx-detalhe-foto apx-detalhe-foto--compacta mt-4">
+                        <img src="img/apx-carro-showcase.webp"
+                             alt="Detalhe frontal de um sedã laranja em estúdio escuro"
+                             width="2048" height="1152" loading="lazy" decoding="async">
+                        <figcaption>Simule a parcela e venha conhecer o carro de perto no showroom.</figcaption>
+                    </figure>
+
+                    <p class="mt-3" style="font-size:0.8rem;color:var(--apx-cinza-3);">
+                        Valores de referência para simulação acadêmica. A aprovação depende de
+                        análise de crédito e o contrato final é emitido pelo banco parceiro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-duvidas">
+        <div class="apx-wrap">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <p class="apx-rotulo">03 — Dúvidas</p>
+                    <h2 class="apx-titulo" id="titulo-duvidas">Perguntas frequentes</h2>
+                    <p class="apx-texto">
+                        O que mais ouvimos no balcão sobre financiamento.
+                    </p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="apx-faq">
+                        <details class="apx-faq__item" open>
+                            <summary>Preciso dar entrada?</summary>
+                            <p>
+                                A entrada mínima é de 10% do valor do veículo. Com 20% a
+                                análise costuma ser aprovada mais rápido e a parcela cai.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Posso usar meu carro usado como entrada?</summary>
+                            <p>
+                                Sim. Avaliamos na loja, com base na tabela FIPE e no estado do
+                                veículo, e o valor entra como parte do pagamento.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Nome sujo impede o financiamento?</summary>
+                            <p>
+                                Não necessariamente. Trabalhamos com mais de um banco parceiro,
+                                inclusive linhas com garantia de veículo, que têm análise diferente.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Quanto tempo leva a aprovação?</summary>
+                            <p>
+                                Em média 40 minutos quando o cadastro está completo e o
+                                comprovante de renda é enviado junto.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Concessionária multimarcas em Curitiba. Veículos novos, seminovos e
+                        elétricos com laudo cautelar, garantia e financiamento próprio.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="financiamento.html">Financiamento</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">A loja</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Institucional</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="equipe.html">Equipe</a></li>
+                        <li><a href="comparativo.html">Comparativo</a></li>
+                        <li><a href="blog.html">Blog e dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="galeria-grid.html">Galeria</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                        <li><a href="https://www.bcb.gov.br" target="_blank" rel="noopener">Banco Central</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>Av. das Torres, 2400 — Curitiba / PR</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="apx-topo-btn" type="button" aria-label="Voltar ao topo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apex.js"></script>
+    <script src="js/estoque.js"></script>
+</body>
+</html>

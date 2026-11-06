@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!-- Apex Motors - servicos da loja - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Serviços da Apex Motors: laudo cautelar, revisão programada, avaliação do usado, documentação e instalação de recarga elétrica.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Serviços | Apex Motors</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top apx-barra" id="apx-barra" aria-label="Navegação principal">
+        <div class="container">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <button class="navbar-toggler apx-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#apx-menu-conteudo" aria-controls="apx-menu-conteudo"
+                    aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse apx-menu" id="apx-menu-conteudo">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estoque.html">Estoque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="financiamento.html">Financiamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">A loja</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuMais" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                        <ul class="dropdown-menu" aria-labelledby="menuMais">
+                            <li><a class="dropdown-item" href="equipe.html">Equipe</a></li>
+                            <li><a class="dropdown-item" href="comparativo.html">Comparativo</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog e dicas</a></li>
+                            <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria-grid.html">Galeria (sem Bootstrap)</a></li>
+                            <li><a class="dropdown-item" href="galeria-flex.html">Flexbox (sem Bootstrap)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://www.fiat.com.br" target="_blank" rel="noopener">Fiat Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.jeep.com.br" target="_blank" rel="noopener">Jeep Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.toyota.com.br" target="_blank" rel="noopener">Toyota Brasil</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2"><span id="apx-saudacao" role="status"></span></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn-apex btn-apex--peq" href="contato.html">Falar com consultor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+    <header class="apx-banner">
+        <div class="apx-banner__fundo">
+            <img src="img/servico-oficina.jpg" alt="" width="1200" height="900">
+        </div>
+        <div class="apx-wrap">
+            <ol class="apx-trilha">
+                <li><a href="index.html">Home</a></li>
+                <li>Serviços</li>
+            </ol>
+            <h1>Serviços da loja</h1>
+            <p>
+                Oficina própria, revisão com peças originais, avaliação do usado e
+                documentação resolvida. Tudo no mesmo endereço.
+            </p>
+        </div>
+    </header>
+
+    <section class="apx-secao" aria-labelledby="titulo-lista">
+        <div class="apx-wrap">
+            <div class="apx-topo">
+                <p class="apx-rotulo">01 — O que fazemos</p>
+                <h2 class="apx-titulo" id="titulo-lista">Da compra à manutenção</h2>
+                <p class="apx-texto">
+                    Cinco serviços com preço de referência publicado. O orçamento final
+                    depende do modelo e do estado do veículo.
+                </p>
+            </div>
+
+            <div>
+                <article class="apx-servico">
+                    <p class="apx-servico__num">01</p>
+                    <div>
+                        <h3 class="apx-servico__titulo">Laudo cautelar completo</h3>
+                        <p class="apx-servico__texto">
+                            Vistoria em 120 pontos: estrutura, pintura, motor, câmbio, suspensão
+                            e histórico documental. Laudo digital entregue em PDF.
+                        </p>
+                    </div>
+                    <p class="apx-servico__preco">incluído</p>
+                </article>
+
+                <article class="apx-servico">
+                    <p class="apx-servico__num">02</p>
+                    <div>
+                        <h3 class="apx-servico__titulo">Revisão programada</h3>
+                        <p class="apx-servico__texto">
+                            Troca de óleo, filtros, velas e checagem eletrônica conforme o
+                            manual do fabricante, com peças originais e nota fiscal.
+                        </p>
+                    </div>
+                    <p class="apx-servico__preco">a partir de R$ 690</p>
+                </article>
+
+                <article class="apx-servico">
+                    <p class="apx-servico__num">03</p>
+                    <div>
+                        <h3 class="apx-servico__titulo">Avaliação do seu usado</h3>
+                        <p class="apx-servico__texto">
+                            Avaliação presencial em 40 minutos, com referência na tabela FIPE
+                            e proposta de troca por escrito.
+                        </p>
+                    </div>
+                    <p class="apx-servico__preco">gratuito</p>
+                </article>
+
+                <article class="apx-servico">
+                    <p class="apx-servico__num">04</p>
+                    <div>
+                        <h3 class="apx-servico__titulo">Transferência e documentação</h3>
+                        <p class="apx-servico__texto">
+                            Transferência, licenciamento, IPVA e emissão de ATPV-e resolvidos
+                            pelo nosso despachante credenciado.
+                        </p>
+                    </div>
+                    <p class="apx-servico__preco">a partir de R$ 420</p>
+                </article>
+
+                <article class="apx-servico">
+                    <p class="apx-servico__num">05</p>
+                    <div>
+                        <h3 class="apx-servico__titulo">Instalação de recarga elétrica</h3>
+                        <p class="apx-servico__texto">
+                            Projeto e instalação de wallbox em residência ou empresa, com
+                            laudo técnico e adequação do quadro de distribuição.
+                        </p>
+                    </div>
+                    <p class="apx-servico__preco">a partir de R$ 3.900</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-planos">
+        <div class="apx-wrap">
+            <div class="apx-topo">
+                <p class="apx-rotulo">02 — Planos de manutenção</p>
+                <h2 class="apx-titulo" id="titulo-planos">Compare os planos</h2>
+                <p class="apx-texto">
+                    Contratação anual. Os valores incluem mão de obra e peças de desgaste.
+                </p>
+            </div>
+
+            <div class="apx-tabela-wrap">
+                <div class="apx-tabela-scroll">
+                    <table class="table apx-tabela mb-0">
+                        <caption>
+                            Tabela 1 — Planos de manutenção preventiva da Apex Motors
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Plano</th>
+                                <th scope="col">Revisões por ano</th>
+                                <th scope="col">Alinhamento</th>
+                                <th scope="col">Guincho 24h</th>
+                                <th scope="col">Carro reserva</th>
+                                <th scope="col">Mensalidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Essencial</td>
+                                <td>1</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-nao">Não</td>
+                                <td class="apx-celula-nao">Não</td>
+                                <td class="apx-celula-destaque">R$ 149</td>
+                            </tr>
+                            <tr>
+                                <td>Completo</td>
+                                <td>2</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-nao">Não</td>
+                                <td class="apx-celula-destaque">R$ 279</td>
+                            </tr>
+                            <tr>
+                                <td>Premium</td>
+                                <td>3</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-destaque">R$ 449</td>
+                            </tr>
+                            <tr>
+                                <td>Frota</td>
+                                <td>4</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-ok">Sim</td>
+                                <td class="apx-celula-destaque">Sob consulta</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="mt-3 mb-0" style="font-size:0.8rem;color:var(--apx-cinza-3);">
+                Planos válidos para veículos com até 10 anos de fabricação. Serviços de
+                colisão e funilaria não estão incluídos.
+            </p>
+        </div>
+    </section>
+
+    <section class="apx-secao" aria-labelledby="titulo-audio">
+        <div class="apx-wrap">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <p class="apx-rotulo">03 — Rádio Apex</p>
+                    <h2 class="apx-titulo" id="titulo-audio">Ouça nosso spot</h2>
+                    <p class="apx-texto mb-4">
+                        A trilha institucional da loja, de 36 segundos, usada nas campanhas de
+                        rádio e no vídeo de apresentação.
+                    </p>
+
+                    <div class="apx-audio">
+                        <p class="apx-rotulo mb-1">Spot institucional 2026</p>
+                        <p style="font-size:0.9rem;color:var(--apx-branco);margin-bottom:0;">
+                            36 segundos de trilha da Apex Motors
+                        </p>
+                        <audio controls preload="metadata">
+                            <source src="video/trilha-apex.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                            <a href="video/trilha-apex.mp3">Baixe o arquivo MP3</a>.
+                        </audio>
+                        <p style="font-size:0.78rem;color:var(--apx-cinza-3);margin:0.9rem 0 0;">
+                            Use os controles para reproduzir, pausar e ajustar o volume.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="apx-midia">
+                        <video controls muted playsinline preload="metadata" poster="img/video-poster.jpg"
+                               width="1280" height="720">
+                            <source src="video/showroom.webm" type="video/webm">
+                            <source src="video/showroom.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                            <a href="video/showroom.mp4">Baixe o arquivo MP4</a>.
+                        </video>
+                        <p class="apx-midia__legenda">
+                            Apresentação do showroom da Apex Motors
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-faq">
+        <div class="apx-wrap">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <p class="apx-rotulo">04 — Dúvidas</p>
+                    <h2 class="apx-titulo" id="titulo-faq">Sobre a oficina</h2>
+                    <p class="apx-texto">
+                        Se a sua dúvida não estiver aqui, mande no formulário de contato.
+                    </p>
+                    <a href="contato.html" class="btn-apex btn-apex--vazio">Enviar pergunta</a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="apx-faq">
+                        <details class="apx-faq__item" open>
+                            <summary>A garantia cobre o quê?</summary>
+                            <p>
+                                Motor, câmbio, sistema de arrefecimento e injeção eletrônica por
+                                seis meses, sem limite de quilometragem. Itens de desgaste natural
+                                como pneus, pastilhas e palhetas não estão incluídos.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Preciso agendar a revisão?</summary>
+                            <p>
+                                Sim, o agendamento garante o box e o tempo de espera. Sem agendamento
+                                o atendimento acontece por ordem de chegada.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Vocês atendem carro comprado em outra loja?</summary>
+                            <p>
+                                Sim. A oficina é aberta a qualquer veículo, de qualquer marca.
+                                A garantia estendida vale apenas para carros vendidos aqui.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Qual o prazo de uma revisão completa?</summary>
+                            <p>
+                                De 3 a 5 horas para a revisão de 30 mil quilômetros. Serviços
+                                corretivos podem levar mais de um dia.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Concessionária multimarcas em Curitiba. Veículos novos, seminovos e
+                        elétricos com laudo cautelar, garantia e financiamento próprio.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="financiamento.html">Financiamento</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">A loja</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Institucional</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="equipe.html">Equipe</a></li>
+                        <li><a href="comparativo.html">Comparativo</a></li>
+                        <li><a href="blog.html">Blog e dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="galeria-grid.html">Galeria sem Bootstrap</a></li>
+                        <li><a href="galeria-flex.html">Flexbox sem Bootstrap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                        <li><a href="https://www.fipe.org.br" target="_blank" rel="noopener">Tabela FIPE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>Av. das Torres, 2400 — Curitiba / PR</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="apx-topo-btn" type="button" aria-label="Voltar ao topo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apex.js"></script>
+</body>
+</html>

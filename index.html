@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- Apex Motors - pagina inicial - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apex Motors: concessionária multimarcas em Curitiba com estoque de veículos novos, seminovos e elétricos, financiamento e oficina especializada.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Apex Motors | Concessionária Multimarcas</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+
+    <style>
+        .apx-faixa .apx-faixa__item {
+            color: #FFFFFF !important;
+        }
+    </style>
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top apx-barra" id="apx-barra" aria-label="Navegação principal">
+        <div class="container">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <button class="navbar-toggler apx-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#apx-menu-conteudo" aria-controls="apx-menu-conteudo"
+                    aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse apx-menu" id="apx-menu-conteudo">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estoque.html">Estoque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="financiamento.html">Financiamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">A loja</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuMais" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                        <ul class="dropdown-menu" aria-labelledby="menuMais">
+                            <li><a class="dropdown-item" href="equipe.html">Equipe</a></li>
+                            <li><a class="dropdown-item" href="comparativo.html">Comparativo</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog e dicas</a></li>
+                            <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria-grid.html">Galeria (sem Bootstrap)</a></li>
+                            <li><a class="dropdown-item" href="galeria-flex.html">Flexbox (sem Bootstrap)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://www.fiat.com.br" target="_blank" rel="noopener">Fiat Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.jeep.com.br" target="_blank" rel="noopener">Jeep Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.toyota.com.br" target="_blank" rel="noopener">Toyota Brasil</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2"><span id="apx-saudacao" role="status"></span></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn-apex btn-apex--peq" href="estoque.html">Ver estoque</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+    <header class="apx-hero apx-hero--fotografico">
+        <div class="apx-hero__midia" aria-hidden="true">
+            <img src="img/apx-hero-premium.webp" alt="" width="2560" height="1440"
+                 fetchpriority="high" decoding="async">
+        </div>
+
+        <div class="apx-wrap">
+            <div class="apx-hero__grade">
+                <div>
+                    <p class="apx-hero__selo"><b aria-hidden="true"></b> Concessionária multimarcas desde 2014</p>
+
+                    <h1 class="apx-hero__titulo">
+                        O carro certo,<br>
+                        <span class="apx-laranja-txt">sem enrolação</span>
+                    </h1>
+
+                    <p class="apx-hero__texto">
+                        Seminovos com laudo cautelar, garantia de 6 meses e financiamento
+                        aprovado na hora. Em Curitiba, com entrega para todo o Brasil.
+                    </p>
+
+                    <div class="apx-hero__acoes">
+                        <a href="estoque.html" class="btn-apex">Ver o estoque</a>
+                        <a href="financiamento.html" class="btn-apex btn-apex--vazio">Simular financiamento</a>
+                    </div>
+
+                    <div class="apx-hero__numeros">
+                        <div class="apx-hero__numero">
+                            <b data-contar="142" data-sufixo="">142</b>
+                            <span>Veículos à venda</span>
+                        </div>
+                        <div class="apx-hero__numero">
+                            <b data-contar="11" data-sufixo="">11</b>
+                            <span>Anos de loja</span>
+                        </div>
+                        <div class="apx-hero__numero">
+                            <b data-contar="4" data-sufixo=",8">4,8</b>
+                            <span>Nota dos clientes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="apx-hero__cartao">
+                    <p class="apx-rotulo mb-2">Busca rápida</p>
+                    <h3>Encontre pelo seu perfil</h3>
+                    <p>Três caminhos para começar: pelo uso, pelo valor ou pelo tipo de veículo.</p>
+
+                    <ul class="apx-lista-check">
+                        <li>Seminovos com até 3 anos de uso</li>
+                        <li>Parcelas a partir de R$ 890 por mês</li>
+                        <li>Elétricos e híbridos com recarga instalada</li>
+                        <li>Tome o usado como parte do pagamento</li>
+                    </ul>
+
+                    <a href="estoque.html" class="apx-link">Filtrar o estoque <span aria-hidden="true">→</span></a>
+                </aside>
+            </div>
+        </div>
+    </header>
+
+    <div class="apx-faixa" aria-hidden="true">
+        <div class="apx-faixa__trilho">
+            <span class="apx-faixa__item">Laudo cautelar em todo o estoque</span>
+            <span class="apx-faixa__item">Garantia de 6 meses</span>
+            <span class="apx-faixa__item">Financiamento em até 60x</span>
+            <span class="apx-faixa__item">Aceitamos seu usado</span>
+            <span class="apx-faixa__item">Revisão com peças originais</span>
+            <span class="apx-faixa__item">Entrega para todo o país</span>
+            <span class="apx-faixa__item">Laudo cautelar em todo o estoque</span>
+            <span class="apx-faixa__item">Garantia de 6 meses</span>
+            <span class="apx-faixa__item">Financiamento em até 60x</span>
+            <span class="apx-faixa__item">Aceitamos seu usado</span>
+            <span class="apx-faixa__item">Revisão com peças originais</span>
+            <span class="apx-faixa__item">Entrega para todo o país</span>
+        </div>
+    </div>
+
+    <section class="apx-secao" aria-labelledby="titulo-destaques">
+        <div class="apx-wrap">
+            <div class="apx-topo">
+                <p class="apx-rotulo">01 — Destaques da semana</p>
+                <h2 class="apx-titulo" id="titulo-destaques">Três carros que saem rápido</h2>
+                <p class="apx-texto">
+                    Selecionados pela equipe de vendas: bom estado, documentação em dia e
+                    valor abaixo da tabela FIPE.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/fiat-toro.jpg" alt="Fiat Toro Freedom 1.8 Flex" width="1200" height="800" loading="lazy">
+                            <div class="apx-card__etiquetas">
+                                <span class="apx-fita apx-fita--seminovo">Seminovo</span>
+                            </div>
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Fiat</p>
+                            <h3 class="apx-card__nome">Toro Freedom</h3>
+                            <div class="apx-card__ficha">
+                                <div>Ano<b>2023</b></div>
+                                <div>Câmbio<b>AUTOMÁTICO</b></div>
+                                <div>Km<b>28.400</b></div>
+                                <div>Combustível<b>flex</b></div>
+                            </div>
+                            <p class="apx-card__preco">R$ 152.900</p>
+                            <p class="apx-card__parcela">ou 48x de R$ 3.354 com 20% de entrada</p>
+                            <div class="apx-card__rodape">
+                                <a class="btn-apex btn-apex--peq" href="estoque.html">Ver detalhes</a>
+                                <a class="btn-apex btn-apex--vazio btn-apex--peq" href="contato.html">Falar com consultor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/jeep-compass.jpg" alt="Jeep Compass Longitude T270" width="1200" height="800" loading="lazy">
+                            <div class="apx-card__etiquetas">
+                                <span class="apx-fita apx-fita--seminovo">Seminovo</span>
+                            </div>
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Jeep</p>
+                            <h3 class="apx-card__nome">Compass Longitude</h3>
+                            <div class="apx-card__ficha">
+                                <div>Ano<b>2022</b></div>
+                                <div>Câmbio<b>AUTOMÁTICO</b></div>
+                                <div>Km<b>41.200</b></div>
+                                <div>Combustível<b>flex</b></div>
+                            </div>
+                            <p class="apx-card__preco">R$ 168.500</p>
+                            <p class="apx-card__parcela">ou 48x de R$ 3.696 com 20% de entrada</p>
+                            <div class="apx-card__rodape">
+                                <a class="btn-apex btn-apex--peq" href="estoque.html">Ver detalhes</a>
+                                <a class="btn-apex btn-apex--vazio btn-apex--peq" href="contato.html">Falar com consultor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/byd-dolphin.jpg" alt="BYD Dolphin Mini GS elétrico" width="1200" height="800" loading="lazy">
+                            <div class="apx-card__etiquetas">
+                                <span class="apx-fita apx-fita--novo">Novo</span>
+                                <span class="apx-fita apx-fita--eletrico">Elétrico</span>
+                            </div>
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">BYD</p>
+                            <h3 class="apx-card__nome">Dolphin Mini GS</h3>
+                            <div class="apx-card__ficha">
+                                <div>Ano<b>2024</b></div>
+                                <div>Câmbio<b>AUTOMÁTICO</b></div>
+                                <div>Km<b>9.400</b></div>
+                                <div>Combustível<b>elétrico</b></div>
+                            </div>
+                            <p class="apx-card__preco">R$ 132.800</p>
+                            <p class="apx-card__parcela">ou 48x de R$ 2.913 com 20% de entrada</p>
+                            <div class="apx-card__rodape">
+                                <a class="btn-apex btn-apex--peq" href="estoque.html">Ver detalhes</a>
+                                <a class="btn-apex btn-apex--vazio btn-apex--peq" href="contato.html">Falar com consultor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="estoque.html" class="btn-apex btn-apex--vazio">Ver os 10 veículos do estoque</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--visual-premium" aria-labelledby="titulo-visual-premium">
+        <div class="apx-wrap">
+            <div class="apx-topo">
+                <p class="apx-rotulo">02 — Showroom</p>
+                <h2 class="apx-titulo" id="titulo-visual-premium">Cada carro apresentado como merece</h2>
+                <p class="apx-texto">
+                    Antes de entrar no estoque, cada veículo passa pelo nosso estúdio: fotos em alta resolução,
+                    detalhes do interior e ângulos que mostram o carro como ele é.
+                </p>
+            </div>
+
+            <div class="apx-editorial">
+                <article class="apx-editorial__card apx-editorial__card--grande">
+                    <img src="img/apx-carro-showcase.webp" alt="Sedã laranja fotografado em estúdio escuro, com destaque para a dianteira" width="2048" height="1152" loading="lazy" decoding="async">
+                    <div class="apx-editorial__conteudo">
+                        <span>Modelo em foco</span>
+                        <h3>Estúdio próprio para cada veículo</h3>
+                        <p>Fotografamos cada carro com luz controlada, para você ver a pintura e o acabamento como eles são.</p>
+                    </div>
+                </article>
+
+                <div class="apx-editorial__pilha">
+                    <article class="apx-editorial__card">
+                        <img src="img/apx-estoque-premium.webp" alt="Sedã laranja em estúdio com composição ampla e espaço negativo" width="2560" height="1440" loading="lazy" decoding="async">
+                        <div class="apx-editorial__conteudo">
+                            <span>Estoque</span>
+                            <h3>Estoque revisado e pronto para sair</h3>
+                            <p>Todo carro do pátio passa pelo laudo cautelar antes de chegar à vitrine da loja.</p>
+                        </div>
+                    </article>
+
+                    <article class="apx-editorial__card">
+                        <img src="img/apx-cta-premium.webp" alt="Dianteira de um sedã laranja em estúdio escuro, com recorte dramático" width="1920" height="1080" loading="lazy" decoding="async">
+                        <div class="apx-editorial__conteudo">
+                            <span>Detalhes</span>
+                            <h3>Cada detalhe conferido de perto</h3>
+                            <p>Faróis, rodas e pintura entram na vistoria de 120 pontos feita pela nossa oficina.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-diferenciais">
+        <div class="apx-wrap">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-5">
+                    <p class="apx-rotulo">03 — Por que a Apex</p>
+                    <h2 class="apx-titulo" id="titulo-diferenciais">Compra de carro não precisa ser desconfiança</h2>
+                    <p class="apx-texto">
+                        Todo veículo entra no nosso pátio com laudo cautelar, revisão de 120 itens
+                        e histórico de manutenção conferido. Se algo não fecha, o carro não é
+                        anunciado.
+                    </p>
+                    <a href="sobre.html" class="btn-apex btn-apex--vazio mt-2">Conhecer a loja</a>
+                    <figure class="apx-detalhe-foto mt-4">
+                        <img src="img/apx-dashboard-premium.webp"
+                             alt="Detalhe do painel e dos instrumentos de um automóvel"
+                             width="2560" height="1440" loading="lazy" decoding="async">
+                        <figcaption>O cuidado está nos detalhes.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="apx-painel h-100">
+                                <span class="apx-numero">01</span>
+                                <h3 class="mt-2">Laudo cautelar</h3>
+                                <p class="mb-0" style="font-size:0.92rem;">
+                                    Vistoria em 120 pontos com laudo digital entregue junto à chave.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="apx-painel h-100">
+                                <span class="apx-numero">02</span>
+                                <h3 class="mt-2">Garantia real</h3>
+                                <p class="mb-0" style="font-size:0.92rem;">
+                                    Seis meses de garantia de motor e câmbio, sem letra miúda.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="apx-painel h-100">
+                                <span class="apx-numero">03</span>
+                                <h3 class="mt-2">Documentação pronta</h3>
+                                <p class="mb-0" style="font-size:0.92rem;">
+                                    Transferência, licenciamento e IPVA resolvidos na loja.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="apx-painel h-100">
+                                <span class="apx-numero">04</span>
+                                <h3 class="mt-2">Troca do usado</h3>
+                                <p class="mb-0" style="font-size:0.92rem;">
+                                    Avaliação na hora com valor de tabela FIPE como referência.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao" aria-labelledby="titulo-depoimento">
+        <div class="apx-wrap">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <p class="apx-rotulo">04 — Quem já comprou</p>
+                    <blockquote class="mb-0">
+                        <p id="titulo-depoimento" style="font-size:clamp(1.15rem,1rem+1vw,1.6rem);color:var(--apx-branco);line-height:1.45;">
+                            “Cheguei desconfiado, porque já tinha levado carro com problema em outra loja.
+                            Aqui mostraram o laudo antes de eu perguntar, e o carro estava
+                            exatamente como no anúncio.”
+                        </p>
+                        <footer class="mt-4 d-flex align-items-center gap-3">
+                            <span class="apx-icone" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="8" r="4"/>
+                                    <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <strong style="display:block;">Ricardo Menezes</strong>
+                                <span style="font-size:0.85rem;color:var(--apx-cinza-3);">Comprou um Compass Longitude em 2025</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="apx-painel apx-painel--destaque">
+                        <p class="apx-rotulo mb-2">Atendimento</p>
+                        <h3 class="mb-3">Fale com um consultor agora</h3>
+                        <p style="font-size:0.93rem;">
+                            Segunda a sábado, das 8h às 19h. Respondemos em até 1 dia útil.
+                        </p>
+                        <div class="d-grid gap-2">
+                            <a href="contato.html" class="btn-apex">Enviar mensagem</a>
+                            <a href="tel:+554133334444" class="btn-apex btn-apex--vazio">(41) 3333-4444</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-midia">
+        <div class="apx-wrap">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <p class="apx-rotulo">05 — Conheça a Apex</p>
+                    <h2 class="apx-titulo" id="titulo-midia">Veja e ouça a nossa loja</h2>
+                    <p class="apx-texto mb-4">
+                        Assista à apresentação do showroom e ouça o spot que toca nas rádios de
+                        Curitiba. Use os controles para reproduzir, pausar e ajustar o volume.
+                    </p>
+
+                    <div class="apx-audio">
+                        <p class="apx-rotulo mb-1">Spot institucional 2026</p>
+                        <p style="font-size:0.9rem;color:var(--apx-branco);margin-bottom:0;">
+                            36 segundos de trilha da Apex Motors
+                        </p>
+                        <audio controls preload="metadata">
+                            <source src="video/trilha-apex.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                            <a href="video/trilha-apex.mp3">Baixe o arquivo MP3</a>.
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="apx-midia">
+                        <video controls playsinline preload="metadata" poster="img/apx-carro-showcase.webp"
+                               width="1280" height="720">
+                            <source src="video/showroom.webm" type="video/webm">
+                            <source src="video/showroom.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                            <a href="video/showroom.mp4">Baixe o arquivo MP4</a>.
+                        </video>
+                        <p class="apx-midia__legenda">Apresentação do showroom da Apex Motors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao">
+        <div class="apx-wrap">
+            <div class="apx-faixa-cta apx-faixa-cta--foto">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6 ms-lg-auto">
+                        <p class="apx-rotulo mb-2">Seu próximo carro começa aqui</p>
+                        <h2 class="mb-2">Quer simular antes de escolher?</h2>
+                        <p class="mb-4">
+                            A calculadora mostra a parcela real, com juros de 1,29% ao mês,
+                            em até 60 vezes. Sem cadastro e sem espera.
+                        </p>
+                        <a href="financiamento.html" class="btn-apex">Simular agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Concessionária multimarcas em Curitiba. Veículos novos, seminovos e
+                        elétricos com laudo cautelar, garantia e financiamento próprio.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="financiamento.html">Financiamento</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">A loja</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Institucional</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="equipe.html">Equipe</a></li>
+                        <li><a href="comparativo.html">Comparativo</a></li>
+                        <li><a href="blog.html">Blog e dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="galeria-grid.html">Galeria</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                        <li><a href="https://www.fipe.org.br" target="_blank" rel="noopener">Tabela FIPE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>Av. das Torres, 2400 — Curitiba / PR</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="apx-topo-btn" type="button" aria-label="Voltar ao topo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apex.js"></script>
+</body>
+</html>

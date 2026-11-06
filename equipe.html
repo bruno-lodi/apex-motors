@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!-- Apex Motors - equipe da loja - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A equipe da Apex Motors: consultores de vendas, oficina, despachante e sócios fundadores.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Equipe | Apex Motors</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top apx-barra" id="apx-barra" aria-label="Navegação principal">
+        <div class="container">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <button class="navbar-toggler apx-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#apx-menu-conteudo" aria-controls="apx-menu-conteudo"
+                    aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse apx-menu" id="apx-menu-conteudo">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estoque.html">Estoque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="financiamento.html">Financiamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">A loja</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuMais" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                        <ul class="dropdown-menu" aria-labelledby="menuMais">
+                            <li><a class="dropdown-item" href="equipe.html">Equipe</a></li>
+                            <li><a class="dropdown-item" href="comparativo.html">Comparativo</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog e dicas</a></li>
+                            <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria-grid.html">Galeria (sem Bootstrap)</a></li>
+                            <li><a class="dropdown-item" href="galeria-flex.html">Flexbox (sem Bootstrap)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://www.fiat.com.br" target="_blank" rel="noopener">Fiat Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.jeep.com.br" target="_blank" rel="noopener">Jeep Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.toyota.com.br" target="_blank" rel="noopener">Toyota Brasil</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2"><span id="apx-saudacao" role="status"></span></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn-apex btn-apex--peq" href="contato.html">Falar com consultor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+    <header class="apx-banner">
+        <div class="apx-banner__fundo">
+            <img src="img/banner.jpg" alt="" width="1600" height="620">
+        </div>
+        <div class="apx-wrap">
+            <ol class="apx-trilha">
+                <li><a href="index.html">Home</a></li>
+                <li>Equipe</li>
+            </ol>
+            <h1>Quem atende você</h1>
+            <p>Doze pessoas, seis funções. Cada cliente tem um consultor responsável do começo ao fim.</p>
+        </div>
+    </header>
+
+    <section class="apx-secao" aria-labelledby="titulo-equipe">
+        <div class="apx-wrap">
+            <div class="apx-topo">
+                <p class="apx-rotulo">01 — Time de vendas e oficina</p>
+                <h2 class="apx-titulo" id="titulo-equipe">Seis perfis, uma loja</h2>
+                <p class="apx-texto">
+                    Os nomes e fotos abaixo são ilustrativos, criados para este projeto acadêmico.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/equipe1.jpg" alt="Retrato ilustrado de Eduardo Prado" width="600" height="750" loading="lazy">
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Sócio fundador</p>
+                            <h3 class="apx-card__nome">Eduardo Prado</h3>
+                            <p style="font-size:0.92rem;">Responde pela compra do estoque e pela avaliação de todos os veículos que entram.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/equipe2.jpg" alt="Retrato ilustrado de Marina Rocha" width="600" height="750" loading="lazy">
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Sócia fundadora</p>
+                            <h3 class="apx-card__nome">Marina Rocha</h3>
+                            <p style="font-size:0.92rem;">Cuida da parte financeira, do credenciamento com os bancos e da documentação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/equipe3.jpg" alt="Retrato ilustrado de Rafael Nunes" width="600" height="750" loading="lazy">
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Consultor de vendas</p>
+                            <h3 class="apx-card__nome">Rafael Nunes</h3>
+                            <p style="font-size:0.92rem;">Onze anos no setor automotivo. Especialista em SUVs e em troca de usado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/equipe4.jpg" alt="Retrato ilustrado de Camila Ferraz" width="600" height="750" loading="lazy">
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Consultora de vendas</p>
+                            <h3 class="apx-card__nome">Camila Ferraz</h3>
+                            <p style="font-size:0.92rem;">Atende a linha de elétricos e híbridos e orienta sobre instalação de recarga.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/equipe5.jpg" alt="Retrato ilustrado de Diego Matsuda" width="600" height="750" loading="lazy">
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Chefe de oficina</p>
+                            <h3 class="apx-card__nome">Diego Matsuda</h3>
+                            <p style="font-size:0.92rem;">Responsável pelo laudo cautelar e pela revisão de 120 pontos de cada carro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto">
+                            <img src="img/equipe6.jpg" alt="Retrato ilustrado de Luiza Prado" width="600" height="750" loading="lazy">
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Despachante</p>
+                            <h3 class="apx-card__nome">Luiza Prado</h3>
+                            <p style="font-size:0.92rem;">Resolve transferência, licenciamento e IPVA. Acompanha o cliente até o documento pronto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-numeros">
+        <div class="apx-wrap">
+            <div class="apx-topo">
+                <p class="apx-rotulo">02 — Em números</p>
+                <h2 class="apx-titulo" id="titulo-numeros">O time em dados</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-lg-3">
+                    <div class="apx-painel h-100">
+                        <span class="apx-numero" data-contar="12" data-sufixo="">12</span>
+                        <p class="mt-2 mb-0" style="font-size:0.84rem;color:var(--apx-cinza-3);">Pessoas na equipe</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="apx-painel h-100">
+                        <span class="apx-numero" data-contar="94" data-sufixo="">94</span>
+                        <p class="mt-2 mb-0" style="font-size:0.84rem;color:var(--apx-cinza-3);">Anos somados de experiência</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="apx-painel h-100">
+                        <span class="apx-numero" data-contar="4" data-sufixo="">4</span>
+                        <p class="mt-2 mb-0" style="font-size:0.84rem;color:var(--apx-cinza-3);">Bancos parceiros</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="apx-painel h-100">
+                        <span class="apx-numero" data-contar="4" data-sufixo=",8">4,8</span>
+                        <p class="mt-2 mb-0" style="font-size:0.84rem;color:var(--apx-cinza-3);">Nota média dos clientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao" aria-labelledby="titulo-vaga">
+        <div class="apx-wrap">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <p class="apx-rotulo">03 — Oportunidades</p>
+                    <h2 class="apx-titulo" id="titulo-vaga">Trabalhe com a gente</h2>
+                    <p class="apx-texto">
+                        Estamos sempre abertos a conhecer gente boa. Se você tem experiência em
+                        vendas de veículos, mecânica ou atendimento, envie seu currículo pelo
+                        formulário escolhendo o assunto <strong>Trabalhe com a gente</strong>.
+                    </p>
+                    <ul>
+                        <li>Salário fixo mais comissão sobre venda</li>
+                        <li>Escala de segunda a sábado, com folga no meio da semana</li>
+                        <li>Formação técnica em mecânica custeada pela loja</li>
+                    </ul>
+                    <a href="contato.html" class="btn-apex">Enviar currículo</a>
+                </div>
+                <div class="col-lg-5">
+                    <div class="apx-painel">
+                        <p class="apx-rotulo mb-2">Vagas abertas</p>
+                        <h3 class="mb-2">Duas no momento</h3>
+                        <p style="font-size:0.93rem;margin-bottom:0.9rem;">
+                            Consultor de vendas e mecânico de manutenção (diesel e flex).
+                        </p>
+                        <a href="contato.html" class="apx-link">Saber mais <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Concessionária multimarcas em Curitiba. Veículos novos, seminovos e
+                        elétricos com laudo cautelar, garantia e financiamento próprio.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="financiamento.html">Financiamento</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">A loja</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Institucional</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="equipe.html">Equipe</a></li>
+                        <li><a href="comparativo.html">Comparativo</a></li>
+                        <li><a href="blog.html">Blog e dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="galeria-grid.html">Galeria sem Bootstrap</a></li>
+                        <li><a href="galeria-flex.html">Flexbox sem Bootstrap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                        <li><a href="https://www.fipe.org.br" target="_blank" rel="noopener">Tabela FIPE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>Av. das Torres, 2400 — Curitiba / PR</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="apx-topo-btn" type="button" aria-label="Voltar ao topo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apex.js"></script>
+</body>
+</html>

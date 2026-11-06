@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!-- Apex Motors - galeria em CSS Grid sem Bootstrap - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de fotos da Apex Motors construída sem Bootstrap: layout em CSS Grid puro, filtro por categoria e ampliação em JavaScript nativo.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Galeria em CSS Grid | Apex Motors</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+
+    <style>
+        .galeria-pagina {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-auto-rows: 215px;
+            grid-auto-flow: dense;
+            gap: 10px;
+        }
+
+        .galeria-pagina figure {
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #2A3441;
+            border-radius: 10px;
+            background: #0C1017;
+            cursor: zoom-in;
+        }
+
+        .galeria-pagina img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 600ms cubic-bezier(.22, .61, .36, 1);
+        }
+
+        .galeria-pagina figure:hover img {
+            transform: scale(1.06);
+        }
+
+        .galeria-pagina figcaption {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 1.6rem 0.9rem 0.75rem;
+            background: linear-gradient(to top, rgba(8, 10, 14, 0.95), transparent);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.84rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #F4F6F8;
+        }
+
+        .galeria-pagina .apx-g-larga {
+            grid-column: span 2;
+        }
+
+        .galeria-pagina .apx-g-alta {
+            grid-row: span 2;
+        }
+
+        .galeria-pagina .apx-g-total {
+            grid-column: 1 / -1;
+        }
+
+        .mb-0 { margin-bottom: 0 !important; }
+        .mb-1 { margin-bottom: 0.25rem !important; }
+        .mb-2 { margin-bottom: 0.5rem !important; }
+        .mb-3 { margin-bottom: 1rem !important; }
+        .mt-2 { margin-top: 0.5rem !important; }
+        .mt-3 { margin-top: 1rem !important; }
+        .mt-5 { margin-top: 2rem !important; }
+
+        @media (max-width: 991.98px) {
+            .galeria-pagina {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 520px) {
+            .galeria-pagina {
+                grid-template-columns: 1fr;
+            }
+            .galeria-pagina .apx-g-larga,
+            .galeria-pagina .apx-g-alta,
+            .galeria-pagina .apx-g-total {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="apx-nav-pura" aria-label="Navegação principal">
+        <div class="apx-wrap apx-nav-pura__interno">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <ul class="apx-nav-pura__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li><a href="galeria-flex.html">Versão Flexbox</a></li>
+                <li><a href="https://www.fipe.org.br" target="_blank" rel="noopener">Tabela FIPE</a></li>
+                <li><a href="contato.html" class="btn-apex btn-apex--peq">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+        <header class="apx-secao" style="padding-bottom:0;">
+            <div class="apx-wrap">
+                <p class="apx-rotulo">Página sem framework</p>
+
+                <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.4rem;">
+                    <h1 style="max-width:24ch;margin:0;">Galeria em <span class="apx-laranja-txt">CSS Grid</span> puro</h1>
+                    <span class="apx-selo-puro">0% Bootstrap</span>
+                </div>
+
+                <p class="apx-texto" style="max-width:62ch;">
+                    Esta página não carrega o Bootstrap. A navegação usa <strong>Flexbox</strong>,
+                    a galeria usa <strong>CSS Grid</strong> com áreas assimétricas e a ampliação
+                    das fotos é feita em <strong>JavaScript nativo</strong>, criando os elementos
+                    com <code class="apx-chave">document.createElement</code>.
+                </p>
+            </div>
+        </header>
+
+        <section class="apx-secao" style="padding-top:2.2rem;" aria-labelledby="titulo-galeria">
+            <div class="apx-wrap">
+                <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.2rem;">
+                    <div class="apx-filtros" style="margin-bottom:0;" role="group" aria-label="Filtrar a galeria por assunto">
+                        <button type="button" class="apx-filtro apx-ativo" data-galeria-filtro="todas">Todas</button>
+                        <button type="button" class="apx-filtro" data-galeria-filtro="showroom">Showroom</button>
+                        <button type="button" class="apx-filtro" data-galeria-filtro="veiculos">Veículos</button>
+                        <button type="button" class="apx-filtro" data-galeria-filtro="servicos">Serviços</button>
+                    </div>
+
+                    <p style="margin:0;font-size:0.82rem;color:var(--apx-cinza-3);">
+                        <span id="apx-galeria-contador">10 fotos</span> &middot; clique para ampliar
+                    </p>
+                </div>
+
+                <h2 id="titulo-galeria" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Fotos da loja</h2>
+
+                <div class="galeria-pagina" id="apx-galeria-grade" aria-live="polite"></div>
+
+                <noscript>
+                    <div class="apx-alerta apx-alerta--erro apx-visivel" style="margin-top:1.4rem;">
+                        <div>
+                            <b>O JavaScript está desativado neste navegador.</b><br>
+                            A galeria é montada por JavaScript a partir de um array de fotos.
+                            Com o JavaScript ativo você também consegue filtrar e ampliar as imagens.
+                        </div>
+                    </div>
+                </noscript>
+            </div>
+        </section>
+
+        <section class="apx-secao">
+            <div class="apx-wrap">
+                <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;">
+                    <a href="estoque.html" class="btn-apex btn-apex--vazio">&larr; Ver o estoque</a>
+                    <a href="galeria-flex.html" class="btn-apex">Próxima: versão Flexbox &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Página construída sem Bootstrap, com CSS Grid, Flexbox e JavaScript nativo.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="galeria-grid.html">Galeria Grid</a></li>
+                        <li><a href="galeria-flex.html">Galeria Flexbox</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Sem Bootstrap</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="galeria-grid.html">CSS Grid puro</a></li>
+                        <li><a href="galeria-flex.html">Flexbox puro</a></li>
+                        <li><a href="galeria-flex.html">Laboratório Flexbox</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>HTML5 &middot; CSS Grid &middot; Flexbox &middot; JavaScript puro</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function apxEscapar(texto) {
+            return String(texto)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+    </script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

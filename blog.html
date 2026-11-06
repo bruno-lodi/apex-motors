@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- Apex Motors - blog e dicas - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog da Apex Motors com dicas sobre compra segura de usados, laudo cautelar, financiamento e carros elétricos.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Blog e dicas | Apex Motors</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top apx-barra" id="apx-barra" aria-label="Navegação principal">
+        <div class="container">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <button class="navbar-toggler apx-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#apx-menu-conteudo" aria-controls="apx-menu-conteudo"
+                    aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse apx-menu" id="apx-menu-conteudo">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estoque.html">Estoque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="financiamento.html">Financiamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">A loja</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuMais" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                        <ul class="dropdown-menu" aria-labelledby="menuMais">
+                            <li><a class="dropdown-item" href="equipe.html">Equipe</a></li>
+                            <li><a class="dropdown-item" href="comparativo.html">Comparativo</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog e dicas</a></li>
+                            <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria-grid.html">Galeria (sem Bootstrap)</a></li>
+                            <li><a class="dropdown-item" href="galeria-flex.html">Flexbox (sem Bootstrap)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://www.fiat.com.br" target="_blank" rel="noopener">Fiat Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.jeep.com.br" target="_blank" rel="noopener">Jeep Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.toyota.com.br" target="_blank" rel="noopener">Toyota Brasil</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2"><span id="apx-saudacao" role="status"></span></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn-apex btn-apex--peq" href="contato.html">Falar com consultor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+    <header class="apx-banner">
+        <div class="apx-banner__fundo">
+            <img src="img/blog1.jpg" alt="" width="900" height="600">
+        </div>
+        <div class="apx-wrap">
+            <ol class="apx-trilha">
+                <li><a href="index.html">Home</a></li>
+                <li>Blog e dicas</li>
+            </ol>
+            <h1>Dicas de quem vende carro há 11 anos</h1>
+            <p>
+                Como avaliar um usado, o que conferir no laudo e o que ninguém te conta
+                na hora do financiamento.
+            </p>
+        </div>
+    </header>
+
+    <section class="apx-secao" aria-labelledby="titulo-destaque">
+        <div class="apx-wrap">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <article class="card apx-card border-0 h-100">
+                        <div class="apx-card__foto" style="aspect-ratio:16/9;">
+                            <img src="img/apx-dashboard-premium.webp" alt="Painel de instrumentos de um veículo em vistoria" width="2560" height="1440" loading="lazy">
+                            <div class="apx-card__etiquetas">
+                                <span class="apx-fita apx-fita--novo">Destaque</span>
+                            </div>
+                        </div>
+                        <div class="apx-card__corpo">
+                            <p class="apx-card__marca">Compra segura &middot; 7 min de leitura</p>
+                            <h2 style="font-size:1.5rem;margin-bottom:0.7rem;">O que o laudo cautelar realmente mostra</h2>
+                            <p style="font-size:0.94rem;">
+                                Laudo não é garantia de carro perfeito. Ele aponta histórico de
+                                estrutura, leilão e sinistro — e é justamente aí que mora o
+                                risco que você precisa conhecer.
+                            </p>
+                            <a class="apx-link mt-auto" href="servicos.html">Ler o artigo <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="row g-4 h-100">
+                        <div class="col-12">
+                            <article class="apx-painel h-100">
+                                <p class="apx-rotulo mb-2">Financiamento &middot; 5 min</p>
+                                <h3 style="font-size:1.1rem;">Entrada maior nem sempre é melhor</h3>
+                                <p style="font-size:0.92rem;">
+                                    Dar 50% de entrada reduz a parcela, mas pode ser pior do que
+                                    investir o dinheiro. A conta que fazemos no balcão.
+                                </p>
+                                <a class="apx-link" href="financiamento.html">Ler <span aria-hidden="true">→</span></a>
+                            </article>
+                        </div>
+                        <div class="col-12">
+                            <article class="apx-painel h-100">
+                                <p class="apx-rotulo mb-2">Usados &middot; 6 min</p>
+                                <h3 style="font-size:1.1rem;">Quilometragem baixa pode ser armadilha</h3>
+                                <p style="font-size:0.92rem;">
+                                    Carro com 15 mil km em oito anos costuma significar dois
+                                    anos parado na garagem. Por que isso importa.
+                                </p>
+                                <a class="apx-link" href="estoque.html">Ler <span aria-hidden="true">→</span></a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-arquivo">
+        <div class="apx-wrap">
+            <div class="apx-topo">
+                <p class="apx-rotulo">01 — Arquivo</p>
+                <h2 class="apx-titulo" id="titulo-arquivo">Todos os artigos</h2>
+                <p class="apx-texto">
+                    Organizados do mais recente para o mais antigo.
+                </p>
+            </div>
+
+            <div class="apx-tabela-wrap">
+                <div class="apx-tabela-scroll">
+                    <table class="table apx-tabela mb-0">
+                        <caption>Tabela 1 — Artigos publicados no blog da Apex Motors</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Artigo</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Autor</th>
+                                <th scope="col">Publicado em</th>
+                                <th scope="col">Leitura</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="servicos.html">O que o laudo cautelar realmente mostra</a></td>
+                                <td>Compra segura</td>
+                                <td>Diego Matsuda</td>
+                                <td>2026-09-14</td>
+                                <td>7 min</td>
+                            </tr>
+                            <tr>
+                                <td><a href="financiamento.html">Entrada maior nem sempre é melhor</a></td>
+                                <td>Financiamento</td>
+                                <td>Marina Rocha</td>
+                                <td>2026-08-28</td>
+                                <td>5 min</td>
+                            </tr>
+                            <tr>
+                                <td><a href="estoque.html">Quilometragem baixa pode ser armadilha</a></td>
+                                <td>Usados</td>
+                                <td>Eduardo Prado</td>
+                                <td>2026-08-09</td>
+                                <td>6 min</td>
+                            </tr>
+                            <tr>
+                                <td><a href="galeria-flex.html">Elétrico no dia a dia: 3 meses de uso</a></td>
+                                <td>Elétricos</td>
+                                <td>Camila Ferraz</td>
+                                <td>2026-07-22</td>
+                                <td>8 min</td>
+                            </tr>
+                            <tr>
+                                <td><a href="contato.html">Como funciona o test drive</a></td>
+                                <td>Atendimento</td>
+                                <td>Rafael Nunes</td>
+                                <td>2026-07-05</td>
+                                <td>4 min</td>
+                            </tr>
+                            <tr>
+                                <td><a href="comparativo.html">SUV compacto: qual escolher em 2026</a></td>
+                                <td>Comparativo</td>
+                                <td>Eduardo Prado</td>
+                                <td>2026-06-18</td>
+                                <td>9 min</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao" aria-labelledby="titulo-news">
+        <div class="apx-wrap">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <p class="apx-rotulo">02 — Newsletter</p>
+                    <h2 class="apx-titulo" id="titulo-news">Uma dica por mês</h2>
+                    <p class="apx-texto">
+                        Um e-mail por mês com um artigo novo e os carros que chegaram no
+                        pátio. Sem propaganda toda semana.
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="apx-painel">
+                        <form id="apx-form-news" novalidate>
+                            <div class="apx-campo">
+                                <label for="email-news">Seu e-mail</label>
+                                <input type="email" id="email-news" name="email-news" class="form-control"
+                                       placeholder="seu@email.com" required>
+                                <span class="apx-campo__erro" aria-live="polite"></span>
+                            </div>
+                            <button type="submit" class="btn btn-apex btn-apex--peq">Quero receber</button>
+                            <p id="apx-retorno-news" style="font-size:0.85rem;color:var(--apx-verde);margin:0.9rem 0 0;"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Concessionária multimarcas em Curitiba. Veículos novos, seminovos e
+                        elétricos com laudo cautelar, garantia e financiamento próprio.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="financiamento.html">Financiamento</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">A loja</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Institucional</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="equipe.html">Equipe</a></li>
+                        <li><a href="comparativo.html">Comparativo</a></li>
+                        <li><a href="blog.html">Blog e dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="galeria-grid.html">Galeria sem Bootstrap</a></li>
+                        <li><a href="galeria-flex.html">Flexbox sem Bootstrap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                        <li><a href="https://www.fipe.org.br" target="_blank" rel="noopener">Tabela FIPE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>Av. das Torres, 2400 — Curitiba / PR</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="apx-topo-btn" type="button" aria-label="Voltar ao topo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apex.js"></script>
+</body>
+</html>

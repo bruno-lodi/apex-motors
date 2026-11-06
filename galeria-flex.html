@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!-- Apex Motors - flexbox sem Bootstrap e laboratorio interativo - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página da Apex Motors construída sem Bootstrap: layout inteiro em Flexbox, laboratório interativo de propriedades e configurador de veículo com armazenamento local.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Flexbox e Configurador | Apex Motors</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+
+    <style>
+        .linha-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .coluna-flex {
+            flex: 1 1 340px;
+            min-width: 0;
+        }
+
+        .galeria-flex-pagina {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .galeria-flex-pagina figure {
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #2A3441;
+            border-radius: 10px;
+            background: #0C1017;
+            flex: 1 1 230px;
+            aspect-ratio: 4 / 3;
+        }
+
+        .galeria-flex-pagina figure:nth-child(1),
+        .galeria-flex-pagina figure:nth-child(6) {
+            flex: 2.5 1 440px;
+            aspect-ratio: 2 / 1;
+        }
+
+        .galeria-flex-pagina img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 600ms cubic-bezier(.22, .61, .36, 1);
+        }
+
+        .galeria-flex-pagina figure:hover img {
+            transform: scale(1.06);
+        }
+
+        .galeria-flex-pagina figcaption {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 1.6rem 0.9rem 0.75rem;
+            background: linear-gradient(to top, rgba(8, 10, 14, 0.95), transparent);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.84rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #F4F6F8;
+        }
+
+        .configurador {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            align-items: flex-start;
+        }
+
+        .configurador__campos {
+            flex: 1 1 300px;
+            min-width: 0;
+        }
+
+        .configurador__resumo {
+            flex: 1 1 260px;
+            border: 1px solid #FF5C1E;
+            border-radius: 12px;
+            padding: 1.2rem;
+            background: radial-gradient(120% 100% at 0% 0%, rgba(255, 92, 30, 0.12), transparent 62%), #161B25;
+        }
+
+        .campo-pagina {
+            margin-bottom: 1rem;
+        }
+
+        .campo-pagina label {
+            display: block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #A9B4C2;
+            margin-bottom: 0.35rem;
+        }
+
+        .campo-pagina select {
+            width: 100%;
+            padding: 0.7rem 0.85rem;
+            border-radius: 7px;
+            border: 1px solid #3B4855;
+            background: #0C1017;
+            color: #F4F6F8;
+            font-family: inherit;
+            font-size: 0.94rem;
+        }
+
+        .campo-pagina select:focus {
+            outline: none;
+            border-color: #FF5C1E;
+            box-shadow: 0 0 0 3px rgba(255, 92, 30, 0.16);
+        }
+
+        .mb-0 { margin-bottom: 0 !important; }
+        .mb-1 { margin-bottom: 0.25rem !important; }
+        .mb-2 { margin-bottom: 0.5rem !important; }
+        .mb-3 { margin-bottom: 1rem !important; }
+        .mt-2 { margin-top: 0.5rem !important; }
+        .mt-3 { margin-top: 1rem !important; }
+        .mt-4 { margin-top: 1.5rem !important; }
+    </style>
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="apx-nav-pura" aria-label="Navegação principal">
+        <div class="apx-wrap apx-nav-pura__interno">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <ul class="apx-nav-pura__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li><a href="galeria-grid.html">Versão Grid</a></li>
+                <li><a href="https://www.fipe.org.br" target="_blank" rel="noopener">Tabela FIPE</a></li>
+                <li><a href="contato.html" class="btn-apex btn-apex--peq">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+        <header class="apx-secao" style="padding-bottom:0;">
+            <div class="apx-wrap">
+                <p class="apx-rotulo">Página sem framework</p>
+
+                <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.4rem;">
+                    <h1 style="max-width:26ch;margin:0;">Layout inteiro em <span class="apx-laranja-txt">Flexbox</span></h1>
+                    <span class="apx-selo-puro">0% Bootstrap</span>
+                </div>
+
+                <p class="apx-texto" style="max-width:62ch;">
+                    A página anterior usou CSS Grid para a galeria. Esta usa <strong>Flexbox</strong>
+                    do começo ao fim: navegação, colunas, galeria, configurador e rodapé. No fim da
+                    página há um laboratório onde você troca as propriedades ao vivo.
+                </p>
+            </div>
+        </header>
+
+        <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-galeria">
+            <div class="apx-wrap">
+                <div class="apx-topo">
+                    <p class="apx-rotulo">01 — Galeria</p>
+                    <h2 class="apx-titulo" id="titulo-galeria">A mesma galeria, agora em Flexbox</h2>
+                    <p class="apx-texto">
+                        Compare com a versão em Grid. Aqui a primeira e a sexta foto têm
+                        <code class="apx-chave">flex: 2.5 1 440px</code>, o que as deixa mais largas.
+                    </p>
+                </div>
+
+                <div class="galeria-flex-pagina">
+                    <figure>
+                        <img src="img/fiat-toro.jpg" alt="Fiat Toro Freedom no pátio" width="1200" height="800" loading="lazy">
+                        <figcaption>Fiat Toro Freedom</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/jeep-compass.jpg" alt="Jeep Compass Longitude" width="1200" height="800" loading="lazy">
+                        <figcaption>Jeep Compass</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/honda-hrv.jpg" alt="Honda HR-V EXL" width="1200" height="800" loading="lazy">
+                        <figcaption>Honda HR-V</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/toyota-corolla.jpg" alt="Toyota Corolla Cross" width="1200" height="800" loading="lazy">
+                        <figcaption>Corolla Cross</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/nissan-kicks.jpg" alt="Nissan Kicks Exclusive" width="1200" height="800" loading="lazy">
+                        <figcaption>Nissan Kicks</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/byd-dolphin.jpg" alt="BYD Dolphin Mini GS" width="1200" height="800" loading="lazy">
+                        <figcaption>BYD Dolphin</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="apx-secao" aria-labelledby="titulo-lab">
+            <div class="apx-wrap">
+                <div class="apx-topo">
+                    <p class="apx-rotulo">02 — Laboratório</p>
+                    <h2 class="apx-titulo" id="titulo-lab">Teste o Flexbox ao vivo</h2>
+                    <p class="apx-texto">
+                        Clique nos botões e veja o palco mudar. O código exibido embaixo é
+                        atualizado pelo JavaScript conforme a sua escolha.
+                    </p>
+                </div>
+
+                <div class="apx-controle-linha" role="group" aria-label="Alinhamento no eixo principal">
+                    <button type="button" class="apx-filtro apx-ativo" data-flex="justify-content" data-valor="flex-start">início</button>
+                    <button type="button" class="apx-filtro" data-flex="justify-content" data-valor="center">centro</button>
+                    <button type="button" class="apx-filtro" data-flex="justify-content" data-valor="flex-end">fim</button>
+                    <button type="button" class="apx-filtro" data-flex="justify-content" data-valor="space-between">space-between</button>
+                    <button type="button" class="apx-filtro" data-flex="justify-content" data-valor="space-around">space-around</button>
+                    <button type="button" class="apx-filtro" data-flex="justify-content" data-valor="space-evenly">space-evenly</button>
+                </div>
+
+                <div class="apx-controle-linha" role="group" aria-label="Alinhamento no eixo cruzado e direção">
+                    <button type="button" class="apx-filtro apx-ativo" data-flex="align-items" data-valor="stretch">stretch</button>
+                    <button type="button" class="apx-filtro" data-flex="align-items" data-valor="center">center</button>
+                    <button type="button" class="apx-filtro" data-flex="align-items" data-valor="flex-start">flex-start</button>
+                    <button type="button" class="apx-filtro" data-flex="align-items" data-valor="flex-end">flex-end</button>
+                    <button type="button" class="apx-filtro apx-ativo" data-flex="flex-direction" data-valor="row">row</button>
+                    <button type="button" class="apx-filtro" data-flex="flex-direction" data-valor="column">column</button>
+                    <button type="button" class="apx-filtro apx-ativo" data-flex="flex-wrap" data-valor="wrap">wrap</button>
+                    <button type="button" class="apx-filtro" data-flex="flex-wrap" data-valor="nowrap">nowrap</button>
+                </div>
+
+                <div class="apx-palco" id="apx-palco">
+                    <div class="apx-palco__item">01</div>
+                    <div class="apx-palco__item">02</div>
+                    <div class="apx-palco__item">03</div>
+                    <div class="apx-palco__item">04</div>
+                </div>
+
+                <p class="apx-codigo mb-0">
+                    <span style="color:#6F7D8C;">.apx-palco {</span><br>
+                    &nbsp;&nbsp;display: flex;<br>
+                    &nbsp;&nbsp;<span id="apx-linha-justify">justify-content: <b>flex-start</b>;</span><br>
+                    &nbsp;&nbsp;<span id="apx-linha-align">align-items: <b>stretch</b>;</span><br>
+                    &nbsp;&nbsp;<span id="apx-linha-direction">flex-direction: <b>row</b>;</span><br>
+                    &nbsp;&nbsp;<span id="apx-linha-wrap">flex-wrap: <b>wrap</b>;</span><br>
+                    <span style="color:#6F7D8C;">}</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-config">
+            <div class="apx-wrap">
+                <div class="apx-topo">
+                    <p class="apx-rotulo">03 — Configurador</p>
+                    <h2 class="apx-titulo" id="titulo-config">Monte seu Apex 1.0 Turbo</h2>
+                    <p class="apx-texto">
+                        Escolha cor, rodas e pacotes opcionais. O preço é recalculado a cada
+                        alteração e a configuração pode ser salva no navegador.
+                    </p>
+                </div>
+
+                <div class="apx-painel">
+                    <div class="configurador">
+                        <div class="configurador__campos">
+                            <div class="campo-pagina">
+                                <label for="cfg-cor">Cor da carroceria</label>
+                                <select id="cfg-cor"></select>
+                            </div>
+
+                            <div class="campo-pagina">
+                                <label for="cfg-roda">Rodas</label>
+                                <select id="cfg-roda"></select>
+                            </div>
+
+                            <div class="campo-pagina">
+                                <label id="cfg-pacotes-rotulo">Pacotes opcionais</label>
+                                <div id="cfg-pacotes" role="group" aria-labelledby="cfg-pacotes-rotulo"></div>
+                            </div>
+
+                            <button type="button" class="btn-apex btn-apex--peq" id="cfg-salvar">
+                                Salvar configuração
+                            </button>
+                            <p id="cfg-retorno" style="font-size:0.84rem;color:#21C77C;margin:0.8rem 0 0;"></p>
+                        </div>
+
+                        <div class="configurador__resumo">
+                            <p class="apx-rotulo mb-2">Resumo</p>
+                            <h3 style="font-size:1.05rem;margin-bottom:0.9rem;">Apex 1.0 Turbo</h3>
+                            <div id="cfg-resumo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="apx-secao">
+            <div class="apx-wrap">
+                <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;">
+                    <a href="galeria-grid.html" class="btn-apex btn-apex--vazio">&larr; Versão em Grid</a>
+                    <a href="estoque.html" class="btn-apex">Ver o estoque &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Página construída sem Bootstrap, com Flexbox e JavaScript nativo.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="galeria-grid.html">Galeria Grid</a></li>
+                        <li><a href="galeria-flex.html">Galeria Flexbox</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Sem Bootstrap</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="galeria-grid.html">CSS Grid puro</a></li>
+                        <li><a href="galeria-flex.html">Flexbox puro</a></li>
+                        <li><a href="galeria-flex.html">Laboratório Flexbox</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>HTML5 &middot; Flexbox &middot; JavaScript puro</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function apxLerJson(chave, padrao) {
+            try {
+                var bruto = localStorage.getItem(chave);
+                if (bruto === null) { return padrao; }
+                return JSON.parse(bruto);
+            } catch (erro) {
+                return padrao;
+            }
+        }
+
+        function apxGravarJson(chave, valor) {
+            try {
+                localStorage.setItem(chave, JSON.stringify(valor));
+                return true;
+            } catch (erro) {
+                return false;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var anos = document.querySelectorAll('.apx-ano');
+            for (var i = 0; i < anos.length; i++) {
+                anos[i].textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+    <script src="js/laboratorio.js"></script>
+</body>
+</html>

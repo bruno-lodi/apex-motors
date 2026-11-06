@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- Apex Motors - formulario de contato - autores: Bruno Lodi e Pietro Ferreira dos Santos -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fale com a Apex Motors: formulário com validação, telefone, WhatsApp e endereço da loja em Curitiba.">
+    <meta name="theme-color" content="#0B0E13">
+    <title>Contato | Apex Motors</title>
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/apex.css">
+</head>
+<body>
+
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top apx-barra" id="apx-barra" aria-label="Navegação principal">
+        <div class="container">
+            <a class="apx-marca" href="index.html">
+                <span class="apx-marca__icone" aria-hidden="true">
+                    <svg viewBox="0 0 64 64">
+                        <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                        <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                        <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                    </svg>
+                </span>
+                Apex<b>Motors</b>
+            </a>
+
+            <button class="navbar-toggler apx-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#apx-menu-conteudo" aria-controls="apx-menu-conteudo"
+                    aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse apx-menu" id="apx-menu-conteudo">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estoque.html">Estoque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="financiamento.html">Financiamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">A loja</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuMais" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+                        <ul class="dropdown-menu" aria-labelledby="menuMais">
+                            <li><a class="dropdown-item" href="equipe.html">Equipe</a></li>
+                            <li><a class="dropdown-item" href="comparativo.html">Comparativo</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog e dicas</a></li>
+                            <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria-grid.html">Galeria (sem Bootstrap)</a></li>
+                            <li><a class="dropdown-item" href="galeria-flex.html">Flexbox (sem Bootstrap)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://www.fiat.com.br" target="_blank" rel="noopener">Fiat Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.jeep.com.br" target="_blank" rel="noopener">Jeep Brasil</a></li>
+                            <li><a class="dropdown-item" href="https://www.toyota.com.br" target="_blank" rel="noopener">Toyota Brasil</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2"><span id="apx-saudacao" role="status"></span></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn-apex btn-apex--peq" href="contato.html">Falar com consultor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+
+    <header class="apx-banner">
+        <div class="apx-banner__fundo">
+            <img src="img/banner.jpg" alt="" width="1600" height="620">
+        </div>
+        <div class="apx-wrap">
+            <ol class="apx-trilha">
+                <li><a href="index.html">Home</a></li>
+                <li>Contato</li>
+            </ol>
+            <h1>Fale com a Apex</h1>
+            <p>
+                Responda em um minuto e um consultor retorna em até 1 dia útil.
+                Você também pode passar na loja, de segunda a sábado.
+            </p>
+        </div>
+    </header>
+
+    <section class="apx-secao" aria-labelledby="titulo-contato">
+        <div class="apx-wrap">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <p class="apx-rotulo">01 — Canais diretos</p>
+                    <h2 class="apx-titulo" id="titulo-contato">Onde nos encontrar</h2>
+                    <p class="apx-texto mb-4">
+                        Se preferir resolver rápido, use o telefone ou o WhatsApp.
+                    </p>
+
+                    <ul class="apx-contato-lista">
+                        <li>
+                            <span class="apx-icone" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M5 4h4l2 5-2.5 1.5a12 12 0 006 6L16 14l5 2v4a1 1 0 01-1 1A16 16 0 013 5a1 1 0 011-1z"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="apx-contato-lista__rotulo">Telefone e WhatsApp</span>
+                                <a class="apx-contato-lista__valor" href="tel:+554133334444">(41) 3333-4444</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="apx-icone" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                                    <path d="M3 7l9 6 9-6"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="apx-contato-lista__rotulo">E-mail</span>
+                                <a class="apx-contato-lista__valor" href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="apx-icone" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/>
+                                    <circle cx="12" cy="10" r="2.5"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="apx-contato-lista__rotulo">Endereço</span>
+                                <span class="apx-contato-lista__valor">Av. das Torres, 2400<br>Curitiba / PR</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="apx-icone" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path d="M12 7v5l3 2"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="apx-contato-lista__rotulo">Horário</span>
+                                <span class="apx-contato-lista__valor">Segunda a sábado, 8h às 19h</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <hr class="apx-divisor">
+
+                    <div class="apx-painel">
+                        <h3 style="font-size:1.02rem;">O que acontece depois do envio</h3>
+                        <ol style="margin-bottom:0;font-size:0.9rem;">
+                            <li>O consultor confere a disponibilidade do veículo.</li>
+                            <li>Ele liga ou responde no e-mail em até 1 dia útil.</li>
+                            <li>Se houver interesse, agenda visita e test drive.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <form id="apx-form-contato" class="apx-form" novalidate>
+                        <h2 class="mb-1" style="font-size:1.35rem;">Formulário de contato</h2>
+                        <p style="font-size:0.87rem;color:var(--apx-cinza-3);margin-bottom:1.6rem;">
+                            Campos com <span style="color:var(--apx-vermelho);">*</span> são obrigatórios.
+                        </p>
+
+                        <div class="alert apx-alerta" id="apx-alerta-form" role="status" aria-live="polite"></div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="apx-campo">
+                                    <label for="nome">Nome completo *</label>
+                                    <input type="text" id="nome" name="nome" class="form-control"
+                                           placeholder="Seu nome" required minlength="3" autocomplete="name">
+                                    <span class="apx-campo__erro" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="apx-campo">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                           placeholder="seu@email.com" required autocomplete="email">
+                                    <span class="apx-campo__erro" aria-live="polite"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="apx-campo">
+                                    <label for="telefone">Telefone *</label>
+                                    <input type="tel" id="telefone" name="telefone" class="form-control"
+                                           placeholder="(41) 99999-9999"
+                                           pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                                           title="Formato: (41) 99999-9999"
+                                           required autocomplete="tel">
+                                    <span class="apx-campo__erro" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="apx-campo">
+                                    <label for="modelo">Veículo de interesse *</label>
+                                    <select id="modelo" name="modelo" class="form-select" required>
+                                        <option value="">Selecione um veículo</option>
+                                        <option value="toro-freedom">Fiat Toro Freedom</option>
+                                        <option value="compass-longitude">Jeep Compass Longitude</option>
+                                        <option value="corolla-cross">Toyota Corolla Cross XRE</option>
+                                        <option value="hrv-exl">Honda HR-V EXL</option>
+                                        <option value="tcross-comfortline">Volkswagen T-Cross Comfortline</option>
+                                        <option value="creta-attitude">Hyundai Creta Attitude</option>
+                                        <option value="onix-activ">Chevrolet Onix Activ</option>
+                                        <option value="kicks-exclusive">Nissan Kicks Exclusive</option>
+                                        <option value="dolphin-gs">BYD Dolphin Mini GS</option>
+                                        <option value="c4-cactus-feel">Citroën C4 Cactus Feel</option>
+                                        <option value="outro">Outro modelo ou serviço</option>
+                                    </select>
+                                    <span class="apx-campo__erro" aria-live="polite"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apx-campo">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="5"
+                                      placeholder="Conte o que você procura: modelo, faixa de preço, se tem usado para troca."
+                                      required minlength="12"></textarea>
+                            <span class="apx-campo__erro" aria-live="polite"></span>
+                        </div>
+
+                        <div class="apx-campo apx-campo--check">
+                            <input type="checkbox" id="aceite" name="aceite" required>
+                            <label for="aceite">
+                                Autorizo o contato e o armazenamento destes dados neste navegador,
+                                conforme a política de privacidade. <span style="color:var(--apx-vermelho);">*</span>
+                            </label>
+                            <span class="apx-campo__erro" aria-live="polite"></span>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-3 align-items-center mt-4">
+                            <button type="submit" class="btn btn-apex">Enviar mensagem</button>
+                            <button type="reset" class="btn btn-apex btn-apex--vazio btn-apex--peq">Limpar</button>
+                        </div>
+
+                        <p style="font-size:0.78rem;color:var(--apx-cinza-3);margin:1.1rem 0 0;">
+                            Projeto acadêmico: os dados são gravados apenas no seu navegador com
+                            <span class="apx-chave">localStorage</span>. Nada é enviado a um servidor.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apx-secao apx-secao--alt" aria-labelledby="titulo-duvidas">
+        <div class="apx-wrap">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <p class="apx-rotulo">02 — Dúvidas</p>
+                    <h2 class="apx-titulo" id="titulo-duvidas">Antes de escrever</h2>
+                    <p class="apx-texto">
+                        Talvez a resposta esteja aqui e você economize uma ligação.
+                    </p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="apx-faq">
+                        <details class="apx-faq__item" open>
+                            <summary>Posso agendar test drive?</summary>
+                            <p>
+                                Sim. Basta informar o modelo e o horário de preferência no formulário
+                                acima. O test drive dura em média 20 minutos e precisa de CNH válida.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Vocês entregam fora de Curitiba?</summary>
+                            <p>
+                                Sim, para todo o Brasil. O frete é calculado por transportadora
+                                cegonha e informado antes do fechamento.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Aceitam meu carro usado na troca?</summary>
+                            <p>
+                                Sim. A avaliação é presencial e gratuita. O valor entra como parte
+                                do pagamento do veículo novo.
+                            </p>
+                        </details>
+                        <details class="apx-faq__item">
+                            <summary>Como funciona a garantia?</summary>
+                            <p>
+                                Seis meses para motor e câmbio, sem limite de quilometragem. O
+                                termo vem descrito no contrato de compra e venda.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="apx-rodape">
+        <div class="apx-wrap">
+            <div class="apx-rodape__grade">
+                <div>
+                    <a class="apx-marca" href="index.html">
+                        <span class="apx-marca__icone" aria-hidden="true">
+                            <svg viewBox="0 0 64 64">
+                                <rect width="64" height="64" rx="12" fill="#0B0E13"/>
+                                <path d="M32 11 L45 33 H36.5 L41 42 H23 L27.5 33 H19 Z" fill="#FF5C1E"/>
+                                <rect x="15" y="46" width="34" height="4.5" rx="2.25" fill="#FF5C1E" opacity="0.55"/>
+                            </svg>
+                        </span>
+                        Apex<b>Motors</b>
+                    </a>
+                    <p class="apx-rodape__texto">
+                        Concessionária multimarcas em Curitiba. Veículos novos, seminovos e
+                        elétricos com laudo cautelar, garantia e financiamento próprio.
+                    </p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+                    <h2 class="apx-rodape__titulo">Navegação</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="estoque.html">Estoque</a></li>
+                        <li><a href="financiamento.html">Financiamento</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">A loja</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Institucional</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="equipe.html">Equipe</a></li>
+                        <li><a href="comparativo.html">Comparativo</a></li>
+                        <li><a href="blog.html">Blog e dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="galeria-grid.html">Galeria sem Bootstrap</a></li>
+                        <li><a href="galeria-flex.html">Flexbox sem Bootstrap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="apx-rodape__titulo">Contato</h2>
+                    <ul class="apx-rodape__links">
+                        <li><a href="tel:+554133334444">(41) 3333-4444</a></li>
+                        <li><a href="mailto:vendas@apexmotors.com.br">vendas@apexmotors.com.br</a></li>
+                        <li><a href="contato.html">Formulário de contato</a></li>
+                        <li><a href="https://www.fipe.org.br" target="_blank" rel="noopener">Tabela FIPE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apx-rodape__base">
+                <p>© <span class="apx-ano">2026</span> Apex Motors. Projeto acadêmico de Bruno Lodi e Pietro Ferreira dos Santos.</p>
+                <p>Av. das Torres, 2400 — Curitiba / PR</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="apx-topo-btn" type="button" aria-label="Voltar ao topo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apex.js"></script>
+</body>
+</html>
